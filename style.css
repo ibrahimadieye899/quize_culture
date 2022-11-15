@@ -6,7 +6,7 @@
  * Style principal
  */
 
-html,
+
 body {
   margin: 0;
   padding: 0;
@@ -26,6 +26,10 @@ body {
   box-shadow: 5px 4px 8px #747474;
   border-radius: 5px;
   padding: 2rem;
+}
+li{
+  list-style-type: none;
+ 
 }
 
 /**
@@ -67,7 +71,7 @@ body {
  * Section Question
  */
 
-.main-container .question-container #question {
+  .main-container .question-container #question  {
   font-size: 1.2rem;
   background-color: #125fb6;
   color: white;
@@ -77,8 +81,55 @@ body {
   text-align: justify;
   margin-left: 1rem;
 }
+#question1, #question2, #question3{
+  font-size: 1.2rem;
+  background-color: #125fb6;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  text-align: justify;
+  margin-left: 1rem;
+  border-bottom-left-radius: 10px;
+ 
+  
+  
+}
+/* Pour faire un border en bas pour qu'il s'affiche sous forme d'une pointe*/
+#question1::after, #question2::after, #question3::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 0;
+  width: 0;
+ 
+  border-left: 2rem solid transparent;
+  border-bottom: 2rem solid #125fb6;
+  bottom: -0.2rem;
+  left: -1rem;
+  transform: rotate(-10deg);
+}
 
-.main-container .question-container #question:before {
+#mylist, #mylist2, #mylist3{
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  text-align: justify;
+  margin-left: 1rem;
+  display: flex;
+  /* pour espacer les differents composants de ma liste*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5vh 0 0 0;
+  padding: 0;
+  
+}
+
+
+.main-container .question-container #question:before   {
   content: "";
   display: inline-block;
   position: absolute;
@@ -89,9 +140,9 @@ body {
   bottom: -0.2rem;
   left: -1rem;
   transform: rotate(-10deg);
-}
 
-.main-container .question-container #answers {
+}
+.main-container  .question-container  #answers {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -100,7 +151,10 @@ body {
   padding: 0;
 }
 
-.main-container .question-container #answers .answer {
+
+
+
+.main-container  .question-containe  #answers .answer {
   font-size: 1.2rem;
   background-color: #1f89b3;
   color: white;
@@ -112,7 +166,7 @@ body {
   transition: background-color linear 0.2s, color linear 0.2s;
 }
 
-.main-container .question-container #answers .answer:hover {
+.main-container  .question-container  #answers   .answer:hover {
   cursor: pointer;
   background-color: white;
   color: #1f89b3;
